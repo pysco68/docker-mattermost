@@ -137,6 +137,9 @@ finalize_database_parameters() {
       ;;
   esac
 
+  echo "The DB connection (MATTERMOST_DATASOURCE) is:"
+  echo $MATTERMOST_DATASOURCE
+
   # set default user and database
   DB_USER=${DB_USER:-root}
   DB_NAME=${DB_NAME:-mattermost}
