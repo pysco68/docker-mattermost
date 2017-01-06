@@ -43,6 +43,8 @@ update_template() {
   local FILE=${1?missing argument}
   shift
 
+  echo "Updating template"
+
   [[ ! -f ${FILE} ]] && return 1
 
   local VARIABLES=($@)
