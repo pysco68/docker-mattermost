@@ -54,6 +54,8 @@ update_template() {
   for variable in ${VARIABLES[@]}; do
     # Keep the compatibilty: {{VAR}} => ${VAR}
     sed -ri "s/[{]{2}$variable[}]{2}/\${$variable}/g" ${tmp_file}
+    
+    echo "Updating variable $variable with value ${$variable}"
   done
 
   # Replace placeholders
